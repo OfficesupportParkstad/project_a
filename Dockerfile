@@ -8,7 +8,7 @@ WORKDIR /var/www/html
 COPY . /var/www/html
 
 # Installeer eventuele benodigde PHP-extensies
-RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # Open poort 80 voor het HTTP-verkeer
 EXPOSE 80
